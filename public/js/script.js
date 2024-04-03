@@ -9,13 +9,13 @@ Promise.all([
 function start() {
     document.body.append('Models Loaded')
     
-    navigator.getUserMedia(
+   /* navigator.getUserMedia(
         { video:{} },
         stream => video.srcObject = stream,
         err => console.error(err)
-    )
+    )*/
     
-    //video.src = '../videos/speech.mp4'
+    video.src = '../videos/speech.mp4'
     console.log('video added')
     recognizeFaces()
 }
@@ -61,8 +61,8 @@ async function recognizeFaces() {
 
 
 function loadLabeledImages() {
-    //const labels = ['Black Widow', 'Captain America', 'Hawkeye' , 'Jim Rhodes', 'Tony Stark', 'Thor', 'Captain Marvel']
-    const labels = ['Captain America'] // for WebCam
+    const labels = ['Black Widow', 'Captain America', 'Hawkeye' , 'Jim Rhodes', 'Tony Stark', 'Thor', 'Captain Marvel']
+    //const labels = ['Kartikey'] // for WebCam
     return Promise.all(
         labels.map(async (label)=>{
             const descriptions = []
